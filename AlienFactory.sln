@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlienFactory", "src\AlienFactory\AlienFactory.csproj", "{748CD7F7-2B93-4A37-8282-AD8743EF697E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A11D99D8-3CD0-424E-B03F-7981CFACA1E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F9DEF8D1-09D6-424A-A01C-4928AD3C9CC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "items", "items", "{9D2BD960-E774-4BA9-AF41-2BA6C6B03E86}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		LICENSE = LICENSE
+		nuget.config = nuget.config
+		README.md = README.md
+		version.json = version.json
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlienFactory.Tests", "tests\AlienFactory.Tests\AlienFactory.Tests.csproj", "{1D629FFE-9FA1-44EA-9B61-62CB0F9BEC27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{748CD7F7-2B93-4A37-8282-AD8743EF697E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{748CD7F7-2B93-4A37-8282-AD8743EF697E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{748CD7F7-2B93-4A37-8282-AD8743EF697E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{748CD7F7-2B93-4A37-8282-AD8743EF697E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D629FFE-9FA1-44EA-9B61-62CB0F9BEC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D629FFE-9FA1-44EA-9B61-62CB0F9BEC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D629FFE-9FA1-44EA-9B61-62CB0F9BEC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D629FFE-9FA1-44EA-9B61-62CB0F9BEC27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{748CD7F7-2B93-4A37-8282-AD8743EF697E} = {A11D99D8-3CD0-424E-B03F-7981CFACA1E7}
+		{1D629FFE-9FA1-44EA-9B61-62CB0F9BEC27} = {F9DEF8D1-09D6-424A-A01C-4928AD3C9CC8}
+	EndGlobalSection
+EndGlobal
