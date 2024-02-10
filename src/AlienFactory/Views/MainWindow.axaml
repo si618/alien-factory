@@ -1,23 +1,30 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AlienFactory.ViewModels"
-        xmlns:af="clr-namespace:AlienFactory"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="225"
+        xmlns:views="clr-namespace:AlienFactory.Views"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
         x:Class="AlienFactory.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/alien.ico"
         Title="{Binding Title}"
-        Height="450"
+        Height="400"
         Width="800"
+        MinHeight="300"
+        MinWidth="600"
         WindowStartupLocation="CenterScreen">
 
     <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <StackPanel Orientation="Vertical">
+        <Panel VerticalAlignment="Stretch" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Panel>
+        <Panel VerticalAlignment="Bottom">
+            <views:LogsView IsVisible="True" />
+        </Panel>
+    </StackPanel>
 </Window>

@@ -12,7 +12,7 @@ public partial class App : Application
 {
     private MainWindow? _mainWindow;
 
-    private void MyMainWindow_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
+    private void MainWindow_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
     {
         if (sender is MainWindow && e.NewValue is WindowState.Minimized)
         {
@@ -34,7 +34,7 @@ public partial class App : Application
                 DataContext = new MainWindowViewModel(),
             };
             desktop.MainWindow = _mainWindow;
-            _mainWindow.PropertyChanged += MyMainWindow_PropertyChanged;
+            _mainWindow.PropertyChanged += MainWindow_PropertyChanged;
 
             RegisterTrayIcon();
         }
@@ -54,6 +54,7 @@ public partial class App : Application
         {
             return;
         }
+
         _mainWindow.WindowState = WindowState.Normal;
         _mainWindow.Show();
     }
