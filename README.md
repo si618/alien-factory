@@ -18,3 +18,25 @@ on implementing an Avalonia tray icon. Also thanks to Aexia for their comment.
 ## 🎉 Demo
 
 TODO
+
+## 🏗 Build️
+
+```bash
+> dotnet --list-sdks
+8.0.101 [/usr/share/dotnet/sdk]
+
+> git --version
+git version 2.43.0
+
+> git clone https://github.com/si618/alien-factory.git
+Cloning into 'alien-factory'...
+
+> cd alien-factory
+> dotnet build
+```
+
+## 🧪 Test
+
+```bash
+> dotnet test
+```
