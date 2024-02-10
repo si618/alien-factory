@@ -1,4 +1,4 @@
-# 👽 Alien Factory 👽
+# 👽 Alien Factory
 
 [![build](https://github.com/si618/alien-factory/actions/workflows/build.yml/badge.svg)](https://github.com/si618/alien-factory/actions/workflows/build.yml)
 [![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](LICENSE)
@@ -11,7 +11,7 @@ fans, RAM sticks, strimer and water cooler block.
 ## 🙇‍♂️ Kudos
 
 - The [amazing OpenRGB](https://openrgb.org) project and community
-- [OpenRGB.NET client](https://github.com/diogotr7/OpenRGB.NET)
+- Diogo Trindade and contributors for [OpenRGB.NET client](https://github.com/diogotr7/OpenRGB.NET)
 - Stipec for an [article](https://dev.to/stipecmv/touch001-solving-tray-icon-and-minimalize-ui-problem-on-arch-linux-with-c-in-avalonia-1f2g)
 on implementing an Avalonia tray icon. Also thanks to Aexia for their comment.
 
