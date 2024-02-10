@@ -1,5 +1,8 @@
 # 👽 Alien Factory 👽
 
+[![build](https://github.com/si618/alien-factory/actions/workflows/build.yml/badge.svg)](https://github.com/si618/alien-factory/actions/workflows/build.yml)
+[![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](LICENSE)
+
 Custom LED programming for my latest PC build.
 
 Effects are triggered based upon current state of PC temperature, CPU and memory load, with integration between LEDs on
