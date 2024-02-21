@@ -12,14 +12,6 @@ public partial class App : Application
 {
     private MainWindow? _mainWindow;
 
-    private void MainWindow_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
-    {
-        if (sender is MainWindow && e.NewValue is WindowState.Minimized)
-        {
-            _mainWindow?.Hide();
-        }
-    }
-
     public override void Initialize()
     {
         AvaloniaXamlLoader.Load(this);
@@ -40,6 +32,14 @@ public partial class App : Application
         }
 
         base.OnFrameworkInitializationCompleted();
+    }
+
+    private void MainWindow_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
+    {
+        if (sender is MainWindow && e.NewValue is WindowState.Minimized)
+        {
+            _mainWindow?.Hide();
+        }
     }
 
     private void RegisterTrayIcon()

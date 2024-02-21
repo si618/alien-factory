@@ -6,5 +6,5 @@
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
              x:Class="AlienFactory.Views.SettingsView"
              x:DataType="viewModels:SettingsViewModel">
-    TODO Log output goes here
+    TODO Application, UserInterface and OpenRgbClient settings goes here
 </UserControl>

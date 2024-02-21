@@ -1,7 +1,5 @@
-﻿namespace AlienFactory.Tests.ViewModels;
+﻿namespace AlienFactory.Tests;
 
-using AlienFactory.ViewModels;
-using FluentAssertions;
 using System.Resources;
 
 public class ResourceBuilderTests
