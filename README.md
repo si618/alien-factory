@@ -39,3 +39,9 @@ Cloning into 'alien-factory'...
 ```bash
 > dotnet test
 ```
+
+## 🚀 Launch
+
+```bash
+> dotnet run --project ./src/AlienFactory
+```

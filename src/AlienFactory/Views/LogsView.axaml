@@ -2,23 +2,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewModels="clr-namespace:AlienFactory.ViewModels"
+             xmlns:vm="using:AlienFactory.ViewModels"
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
              x:Class="AlienFactory.Views.LogsView"
-             x:DataType="viewModels:LogsViewModel">
+             x:DataType="vm:LogsViewModel">
+    <Design.DataContext>
+        <vm:LogsViewModel />
+    </Design.DataContext>
+
     <Panel>
-        <Border Background="DimGray"
-                BorderBrush="DarkSlateGray"
-                BorderThickness="2"
-                CornerRadius="3"
-                BoxShadow="2 2 5 0 DarkGray"
-                Padding="10" Margin="40">
-            <Panel>
-                <Panel>
-                    <TextBlock ></TextBlock>
-                </Panel>
-                <TextBox Text="Logs go here"></TextBox>
-            </Panel>
-        </Border>
+        <Panel VerticalAlignment="Top" HorizontalAlignment="Right">
+            <ToggleButton HorizontalAlignment="Right" IsCheckedChanged="Tail_OnIsCheckedChanged">
+                <TextBlock Text="{Binding Tail}"></TextBlock>
+            </ToggleButton>
+        </Panel>
+        <TextBlock Text="Logs go here"></TextBlock>
     </Panel>
 </UserControl>
