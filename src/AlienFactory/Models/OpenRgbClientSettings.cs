@@ -12,10 +12,10 @@ public record OpenRgbClientSettings(
 {
     private const int DefaultProtocolVersion = 4;
 
-    // TODO IpAddress v4 or v6 validation
+    [ValidIpAddress]
     public string IpAddress { get; init; } = IpAddress;
 
-    // TODO Port validation
+    [Range(1_024, 65_535)]
     public int Port { get; init; } = Port;
 
     [MinLength(1)]
@@ -29,4 +29,3 @@ public record OpenRgbClientSettings(
     [Range(0, 4)]
     public uint ProtocolVersionNumber { get; init; } = ProtocolVersionNumber;
 }
-

@@ -6,5 +6,19 @@
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
              x:Class="AlienFactory.Views.LogsView"
              x:DataType="viewModels:LogsViewModel">
-    TODO Log output goes here
+    <Panel>
+        <Border Background="DimGray"
+                BorderBrush="DarkSlateGray"
+                BorderThickness="2"
+                CornerRadius="3"
+                BoxShadow="2 2 5 0 DarkGray"
+                Padding="10" Margin="40">
+            <Panel>
+                <Panel>
+                    <TextBlock ></TextBlock>
+                </Panel>
+                <TextBox Text="Logs go here"></TextBox>
+            </Panel>
+        </Border>
+    </Panel>
 </UserControl>

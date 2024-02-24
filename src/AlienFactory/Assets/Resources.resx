@@ -28,4 +28,13 @@
     <data name="NativeMenuItem_Exit_Header" xml:space="preserve">
         <value>Exit</value>
     </data>
+    <data name="LogsViewModel_Tail" xml:space="preserve">
+        <value>Tail</value>
+    </data>
+    <data name="SettingsViewModel_Settings" xml:space="preserve">
+        <value>Settings</value>
+    </data>
+    <data name="IpAddressValidatorAttribute_Error" xml:space="preserve">
+        <value />
+    </data>
 </root>

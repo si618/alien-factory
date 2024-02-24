@@ -43,5 +43,13 @@
       <DependentUpon>SettingsView.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ActionsView.axaml.cs">
+      <DependentUpon>ActionsView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\DevicesView.axaml.cs">
+      <DependentUpon>DevicesView.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

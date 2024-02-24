@@ -12,8 +12,7 @@ fans, RAM sticks, strimer and water cooler block.
 
 - The [amazing OpenRGB](https://openrgb.org) project and community
 - Diogo Trindade and contributors for [OpenRGB.NET client](https://github.com/diogotr7/OpenRGB.NET)
-- Stipec for an [article](https://dev.to/stipecmv/touch001-solving-tray-icon-and-minimalize-ui-problem-on-arch-linux-with-c-in-avalonia-1f2g)
-on implementing an Avalonia tray icon. Also thanks to Aexia for their comment.
+- Stipec for an [article](https://dev.to/stipecmv/touch001-solving-tray-icon-and-minimalize-ui-problem-on-arch-linux-with-c-in-avalonia-1f2g) on implementing an Avalonia tray icon
 
 ## 🎉 Demo
 
@@ -23,7 +22,7 @@ TODO
 
 ```bash
 > dotnet --list-sdks
-8.0.101 [/usr/share/dotnet/sdk]
+8.0.201 [/usr/share/dotnet/sdk]
 
 > git --version
 git version 2.43.0

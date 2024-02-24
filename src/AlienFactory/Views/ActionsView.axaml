@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:AlienFactory.ViewModels"
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
-             x:Class="AlienFactory.Views.SettingsView"
-             x:DataType="viewModels:SettingsViewModel">
+             x:Class="AlienFactory.Views.ActionsView"
+             x:DataType="viewModels:ActionsViewModel">
     <Panel>
-        <CheckBox></CheckBox>
+        <TextBlock Text="Actions go here: Effect Selection, Start, Stop"></TextBlock>
     </Panel>
 </UserControl>

@@ -23,7 +23,10 @@
         <Panel VerticalAlignment="Stretch" HorizontalAlignment="Center">
             <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Panel>
-        <Panel VerticalAlignment="Bottom">
+        <Panel HorizontalAlignment="Right" MinWidth="100">
+            <views:SettingsView IsVisible="True" />
+        </Panel>
+        <Panel HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinHeight="100">
             <views:LogsView IsVisible="True" />
         </Panel>
     </StackPanel>

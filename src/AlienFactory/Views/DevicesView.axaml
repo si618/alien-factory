@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="clr-namespace:AlienFactory.ViewModels"
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
-             x:Class="AlienFactory.Views.SettingsView"
-             x:DataType="viewModels:SettingsViewModel">
+             x:Class="AlienFactory.Views.DevicesView"
+             x:DataType="viewModels:DevicesViewModel">
     <Panel>
-        <CheckBox></CheckBox>
+        <TextBlock Text="Devices go here (Enable/disable?)"></TextBlock>
     </Panel>
 </UserControl>
