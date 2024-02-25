@@ -11,6 +11,8 @@
     </Design.DataContext>
 
     <Panel>
-        <CheckBox></CheckBox>
+        <WrapPanel>
+            <CheckBox VerticalAlignment="Top" Content="{Binding ShowSettings}"></CheckBox>
+        </WrapPanel>
     </Panel>
 </UserControl>

@@ -19,28 +19,25 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
-    <StackPanel Orientation="Vertical">
-        <Panel VerticalAlignment="Stretch" HorizontalAlignment="Center">
+    <Panel Margin="8">
+        <Panel VerticalAlignment="Top" MinHeight="300">
+            <Grid ColumnDefinitions="2*,2*,2*">
+                <Panel Grid.Column="0" HorizontalAlignment="Left">
+                    <v:ActionsView DataContext="{Binding ActionsViewModel}" IsVisible="True" />
+                </Panel>
+                <Panel Grid.Column="1">
+                    <v:DevicesView DataContext="{Binding DevicesViewModel}" IsVisible="True" />
+                </Panel>
+                <Panel Grid.Column="2" HorizontalAlignment="Right">
+                    <v:SettingsView DataContext="{Binding SettingsViewModel}" IsVisible="True" />
+                </Panel>
+            </Grid>
+        </Panel>
+        <Panel HorizontalAlignment="Center">
             <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Panel>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Panel Grid.Column="0" HorizontalAlignment="Left">
-                <v:ActionsView DataContext="{Binding ActionsViewModel}" IsVisible="True" />
-            </Panel>
-            <Panel Grid.Column="1" HorizontalAlignment="Center">
-                <v:DevicesView DataContext="{Binding DevicesViewModel}" IsVisible="True" />
-            </Panel>
-            <Panel Grid.Column="2" HorizontalAlignment="Right">
-                <v:SettingsView DataContext="{Binding SettingsViewModel}" IsVisible="True" />
-            </Panel>
-        </Grid>
-        <Panel HorizontalAlignment="Stretch" VerticalAlignment="Bottom" MinHeight="100">
+        <Panel VerticalAlignment="Bottom" MinHeight="100">
             <v:LogsView DataContext="{Binding LogsViewModel}" IsVisible="True" />
         </Panel>
-    </StackPanel>
+    </Panel>
 </Window>

@@ -5,6 +5,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using ReactiveUI;
+using Serilog;
 using ViewModels;
 using Views;
 
@@ -25,21 +26,32 @@ public partial class App : Application
             {
                 DataContext = new MainWindowViewModel(),
             };
+
             desktop.MainWindow = _mainWindow;
             _mainWindow.PropertyChanged += MainWindow_PropertyChanged;
-
             RegisterTrayIcon();
+
+            desktop.ShutdownRequested += ShutdownRequested;
         }
 
         base.OnFrameworkInitializationCompleted();
+        Log.Debug("Alien Factory initialized");
+    }
+
+    private static void ShutdownRequested(object? sender, ShutdownRequestedEventArgs e)
+    {
+        Log.Debug("Alien Factory shutting down");
     }
 
     private void MainWindow_PropertyChanged(object? sender, AvaloniaPropertyChangedEventArgs e)
     {
-        if (sender is MainWindow && e.NewValue is WindowState.Minimized)
+        if (sender is not MainWindow || e.NewValue is not WindowState.Minimized)
         {
-            _mainWindow?.Hide();
+            return;
         }
+
+        Log.Debug("Hiding main window");
+        _mainWindow?.Hide();
     }
 
     private void RegisterTrayIcon()
@@ -55,6 +67,7 @@ public partial class App : Application
             return;
         }
 
+        Log.Information("Showing main window");
         _mainWindow.WindowState = WindowState.Normal;
         _mainWindow.Show();
     }

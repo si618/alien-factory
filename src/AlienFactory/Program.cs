@@ -2,6 +2,7 @@
 
 using Avalonia;
 using Avalonia.ReactiveUI;
+using Microsoft.Extensions.Configuration;
 using Serilog;
 
 internal static class Program
@@ -18,18 +19,25 @@ internal static class Program
         }
         catch (Exception e)
         {
-            Log.Fatal(e, "Rapid Unscheduled Disassembly 🧐");
+            Log.Fatal(e, "Rapid Unscheduled Disassembly");
+        }
+        finally
+        {
+            Log.CloseAndFlush();
         }
     }
 
     // Avalonia configuration, don't remove; also used by visual designer.
     private static AppBuilder BuildAvaloniaApp()
     {
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+
         Log.Logger = new LoggerConfiguration()
             //.Filter.ByIncludingOnly(Matching.WithProperty("Area", LogArea.Control))
-            .MinimumLevel.Verbose()
-            .WriteTo.Console()
-            .WriteTo.Trace()
+            .ReadFrom.Configuration(configuration)
             .CreateLogger();
 
         return AppBuilder.Configure<App>()

@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <AvaloniaResource Include="Assets\**" />
+    <InternalsVisibleTo Include="$(MSBuildProjectName).Tests" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,19 +19,19 @@
     <PackageReference Include="Avalonia.Fonts.Inter" />
     <PackageReference Include="Avalonia.ReactiveUI" />
     <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Options" />
     <PackageReference Include="OpenRGB.NET" />
     <PackageReference Include="Serilog" />
+    <PackageReference Include="Serilog.Settings.Configuration" />
     <PackageReference Include="Serilog.Sinks.Console" />
     <PackageReference Include="Serilog.Sinks.Trace" />
   </ItemGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="$(MSBuildProjectName).Tests" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <None Include="appsettings.json" CopyToOutputDirectory="PreserveNewest"/>
+    <AvaloniaResource Include="Assets\**" />
     <EmbeddedResource Update="Assets\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
