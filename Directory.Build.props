@@ -3,6 +3,7 @@
 
   <PropertyGroup>
     <Authors>Simon McKenna</Authors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
