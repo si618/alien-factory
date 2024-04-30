@@ -9,8 +9,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-
-groups:
-  xunit:
-    patterns:
-    - "xunit*"
+    groups:
+      xunit:
+        patterns:
+          - "xunit*"
