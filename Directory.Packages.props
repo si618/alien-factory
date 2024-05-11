@@ -4,12 +4,12 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Avalonia" Version="11.0.10" />
-    <PackageVersion Include="Avalonia.Desktop" Version="11.0.9" />
+    <PackageVersion Include="Avalonia.Desktop" Version="11.0.10" />
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="11.0.10" />
-    <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.0.9" />
+    <PackageVersion Include="Avalonia.Fonts.Inter" Version="11.0.10" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageVersion Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.9" />
-    <PackageVersion Include="Avalonia.ReactiveUI" Version="11.0.9" />
+    <PackageVersion Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
+    <PackageVersion Include="Avalonia.ReactiveUI" Version="11.0.10" />
     <PackageVersion Include="coverlet.collector" Version="6.0.2" PrivateAssets="all">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
